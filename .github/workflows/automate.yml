@@ -23,10 +23,10 @@ jobs:
         pip install -r requirements.txt  # Falls du ein requirements.txt-Datei hast
 
     - name: Run Python script
-      run: python C:\Users\nouir\Desktop\Project Python Openpyxl\main.py  # Passe den Pfad zu deinem Python-Skript an
+      run: python Yassin9966/Openpyxl/blob/main/main.py  # Passe den Pfad zu deinem Python-Skript an
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
         name: excel_output  # Ein beliebiger Name für das Artefakt
-        path: C:\Users\nouir\Desktop\Project Python Openpyxl\information.txt  # Passe den Pfad zum Ausgabeverzeichnis an
+        path: Yassin9966/Openpyxl/blob/main/information.txt  # Passe den Pfad zum Ausgabeverzeichnis an
