@@ -1,0 +1,32 @@
+name: Automate Excel Python Project
+
+on:
+  push:
+    branches:
+      - main  # Oder den Namen deines Haupt-Branches
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Oder einem anderen unterstützten Betriebssystem
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'  # Wähle die Python-Version, die du verwenden möchtest
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt  # Falls du ein requirements.txt-Datei hast
+
+    - name: Run Python script
+      run: python C:\Users\nouir\Desktop\Project Python Openpyxl\main.py  # Passe den Pfad zu deinem Python-Skript an
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: excel_output  # Ein beliebiger Name für das Artefakt
+        path: C:\Users\nouir\Desktop\Project Python Openpyxl\information.txt  # Passe den Pfad zum Ausgabeverzeichnis an
